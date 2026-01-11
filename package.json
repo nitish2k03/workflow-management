@@ -1,0 +1,19 @@
+{
+  "name": "workflow-management",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev -w @workflow/server",
+    "dev:client": "npm run dev -w @workflow/client",
+    "build": "npm run build -w @workflow/shared && npm run build -w @workflow/server && npm run build -w @workflow/client",
+    "test": "npm run test -w @workflow/server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}
