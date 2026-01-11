@@ -27,7 +27,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-gray-900">{user?.name}</span>
-            <span className="text-xs px-2 py-1 bg-gray-200 rounded text-gray-900">
+            <span className="text-xs px-2 py-1 bg-gray-200 rounded text-gray-900 capitalize">
               {user?.role}
             </span>
             <Button
