@@ -11,7 +11,7 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: true, // Allow all origins temporarily for debugging
+    origin: config.clientUrl,
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
